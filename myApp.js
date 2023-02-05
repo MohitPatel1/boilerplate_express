@@ -4,8 +4,9 @@ let app = express();
 console.log("Hello World");
 const handler = (req,res)=>{
     // res.send("Hello Express")
-    res.sendFile(__dirname+'./views/index.html')
+    res.sendFile(__dirname+'/views/index.html')
 } 
 
 app.get('/',handler)
+app.use(__dirname+'/public',express.static())
 module.exports = app;
