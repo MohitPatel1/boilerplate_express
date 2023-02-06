@@ -1,6 +1,9 @@
 let express = require('express');
 let app = express();
 require('dotenv').config()
+const bodyParser = require('body-parser')
+
+app.get(bodyParser.urlencoded({ extended : false}))
 
 console.log("Hello World");
 
