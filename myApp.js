@@ -11,6 +11,13 @@ app.use((req,res,next) => {
 
 })
 
+app.get('/name',(req,res) => {
+    const { first , last } = req.query;
+    res.json({
+        name: `${first} ${last}`
+    })
+})
+
 app.get('/:word/echo',(req,res) => {
     const { params } = req;
     res.json({echo: params.word})
